@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+// import { AngularFirestore } from '@angular/fire/firestore';
+import { Location } from '@angular/common';
+import { Router } from "@angular/router";
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'drp';
+  title = 'DRP';
+
+
+  // always unsubscribe
+  ngOnDestroy() {
+  }
+
+
 }
