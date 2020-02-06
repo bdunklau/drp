@@ -10,7 +10,7 @@
     ]
   },
   "hosting": {
-    "public": "src",
+    "public": "dist/drp",
     "ignore": [
       "firebase.json",
       "**/.*",
