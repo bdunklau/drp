@@ -11,12 +11,23 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DRP';
+  title = 'Dynamic Road Pricing';
 
 
-  // always unsubscribe
-  ngOnDestroy() {
+  // https://www.w3schools.com/howto/howto_js_sidenav.asp
+  /* Set the width of the side navigation to 250px */
+  openNav(event) {
+    document.getElementById("mySidenav").style.width = "250px";
+    // document.getElementById("thebody").addEventListener('click', this.closeNav, true);
+    // document.body.addEventListener('click', this.fn, true);
+    // document.body.addEventListener('click', function() {window.alert('body clicked')})
   }
 
+  // https://www.w3schools.com/howto/howto_js_sidenav.asp
+  /* Set the width of the side navigation to 0 */
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    // document.getElementById("thebody").removeEventListener('click', this.closeNav);
+  }
 
 }

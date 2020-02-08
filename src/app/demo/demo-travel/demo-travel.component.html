@@ -1,0 +1,15 @@
+<!--
+FIELDS:
+license plate
+time of day
+
+BUTTONS:
+10 buttons one for each toll location
+Next to each button, the price at that location
+ -->
+
+
+<div *ngFor="let location of locations">
+
+    <app-demo-travel-location [locationField]="location"></app-demo-travel-location>
+</div>
