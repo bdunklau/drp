@@ -14,7 +14,7 @@ export class DemoTravelComponent implements OnInit {
   constructor(private pricingService: DemoPricingService) { }
 
   ngOnInit() {
-    this.locations = this.pricingService.getPricing();
+    this.locations = this.pricingService.getPricing({hour:1, minute:1});
   }
 
 }

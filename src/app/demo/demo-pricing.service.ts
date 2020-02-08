@@ -15,7 +15,7 @@ export class DemoPricingService {
 
   constructor() { }
 
-  getPricing() {
+  getPricing(time: {hour: number, minute: number}) {
     return this.pricing;
   }
 }
