@@ -1,10 +1,7 @@
 
-// import * as _ from 'lodash';
 let _ = require('lodash');
-// var _ = require('lodash')
 
 function DemoPricing() {
-  // var _ = require('lodash')
 }
 DemoPricing.prototype.exists = function() {
   return true;
