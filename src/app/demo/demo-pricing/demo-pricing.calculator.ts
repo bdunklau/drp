@@ -1,13 +1,13 @@
 
 let _ = require('lodash');
 
-function DemoPricing() {
+function DemoPricingCalculator() {
 }
-DemoPricing.prototype.exists = function() {
+DemoPricingCalculator.prototype.exists = function() {
   return true;
 };
 
-DemoPricing.prototype.determineTollPrice = function(model, time, locationId) {
+DemoPricingCalculator.prototype.determineTollPrice = function(model, time, locationId) {
 
   var loc = _.filter(model, function(item) {
     return item.locationId == locationId;
@@ -17,9 +17,9 @@ DemoPricing.prototype.determineTollPrice = function(model, time, locationId) {
   // return 1;
 }
 
-DemoPricing.prototype.isValidPrice = function(price) {
+DemoPricingCalculator.prototype.isValidPrice = function(price) {
   var nan = isNaN(price)
   return !nan;
 };
 
-module.exports = DemoPricing;
+module.exports = DemoPricingCalculator;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection/*, CollectionReference*/ } from '@angular/fire/firestore';
-import { DemoPricing } from './demo-pricing/demo-pricing.model';
+import { DemoPricingModel } from './demo-pricing/demo-pricing.model';
 
 
 @Injectable({
@@ -37,7 +37,7 @@ export class DemoPricingService {
     // team.leaderCount = teamDoc.data().leaderCount; // e2e testing caught this omission :)
     // team.memberCount = teamDoc.data().memberCount; // e2e testing caught this omission :)
     console.log('cityDoc.data() = ', cityDoc.data());
-    let pricing = new DemoPricing(cityDoc.data())
+    let pricing = new DemoPricingModel(cityDoc.data())
     console.log('pricing = ', pricing);
     // return team;
   }

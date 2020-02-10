@@ -1,15 +1,15 @@
 describe("DemoPricing calculator", function() {
-  var DemoPricing = require('../../src/app/demo/demo-pricing/demo-pricing.calculator.ts');
-  var demoPricing;
+  var DemoPricingCalculator = require('../../src/app/demo/demo-pricing/demo-pricing.calculator.ts');
+  var calculator;
 
 
   beforeEach(function() {
-    demoPricing = new DemoPricing();
+    calculator = new DemoPricingCalculator();
   });
 
   it("should be exist", function() {
-    demoPricing.exists();
-    expect(demoPricing.exists()).toEqual(true);
+    calculator.exists();
+    expect(calculator.exists()).toEqual(true);
   });
 
   it("should determine the correct toll price", function() {
@@ -22,7 +22,7 @@ describe("DemoPricing calculator", function() {
       {locationId: 'def', time1: 900, time2: 1100, price: 3},
     ]
 
-    let price = demoPricing.determineTollPrice(model, time, locationId);
+    let price = calculator.determineTollPrice(model, time, locationId);
     expect(price).toEqual(1);
   })
 

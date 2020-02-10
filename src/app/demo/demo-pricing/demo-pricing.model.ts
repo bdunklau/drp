@@ -1,9 +1,11 @@
-import { DemoLocation } from '../demo-location/demo-location.model';
+
 let _ = require('lodash');
+
+import { DemoLocation } from '../demo-location/demo-location.model';
 
 
 // ng generate class demo/demo-pricing/demo-pricing --type=model
-export class DemoPricing {
+export class DemoPricingModel {
 
   //
   // array of maps
