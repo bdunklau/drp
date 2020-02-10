@@ -1,4 +1,4 @@
-describe("DemoPricing", function() {
+describe("DemoPricing calculator", function() {
   var DemoPricing = require('../../src/app/demo/demo-pricing/demo-pricing.calculator.ts');
   var demoPricing;
 
