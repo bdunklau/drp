@@ -17,4 +17,9 @@ DemoPricing.prototype.determineTollPrice = function(model, time, locationId) {
   // return 1;
 }
 
+DemoPricing.prototype.isValidPrice = function(price) {
+  var nan = isNaN(price)
+  return !nan;
+};
+
 module.exports = DemoPricing;

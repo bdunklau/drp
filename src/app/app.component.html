@@ -7,7 +7,7 @@
    <a href="javascript:void(0)" class="closebtn" id="closeNav" (click)="closeNav()"><i class="fa fa-close"></i></a>
 
    <div class="nav-heading">Main Menu</div>
-   <a id="home_link" class="nav-link" (click)="closeNav()" routerLink="/demo/charge"><i class="fa fa-home"></i>Charges</a>
+   <a id="home_link" class="nav-link" (click)="closeNav()" [routerLink]="['/demo/charge']"><i class="fa fa-home"></i>Charges</a>
 
 <!--
    ADD THESE BACK WHEREVER YOU WANT TO RESTRICT VISIBILITY

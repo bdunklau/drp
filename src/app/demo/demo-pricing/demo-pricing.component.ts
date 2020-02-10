@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DemoPricingService } from '../demo-pricing.service';
 
 @Component({
   selector: 'app-demo-pricing',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoPricingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pricingService: DemoPricingService) { }
 
   ngOnInit() {
+    console.log('this.pricingService = ', this.pricingService);
+    this.pricingService.getPricingForCity('Dallas');
   }
 
 }

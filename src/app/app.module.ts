@@ -8,6 +8,10 @@ import { DemoPricingComponent } from './demo/demo-pricing/demo-pricing.component
 import { DemoTravelComponent } from './demo/demo-travel/demo-travel.component';
 import { DemoTransactionsComponent } from './demo/demo-transactions/demo-transactions.component';
 import { DemoTravelLocationComponent } from './demo/demo-travel-location/demo-travel-location.component';
+import { AngularFirestore, AngularFirestoreCollection/*, CollectionReference*/ } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -20,10 +24,12 @@ import { DemoTravelLocationComponent } from './demo/demo-travel-location/demo-tr
     DemoTravelLocationComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
