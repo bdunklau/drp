@@ -13,7 +13,7 @@ export class DemoTravelComponent implements OnInit {
 
   constructor(private pricingService: DemoPricingService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.locations = this.pricingService.getPricing({hour:1, minute:1});
   }
 

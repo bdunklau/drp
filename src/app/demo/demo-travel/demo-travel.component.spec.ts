@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DemoTravelComponent } from './demo-travel.component';
+import { DemoTravelLocationComponent } from '../demo-travel-location/demo-travel-location.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { BehaviorSubject, of } from 'rxjs';
 
@@ -31,8 +32,9 @@ describe('DemoTravelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemoTravelComponent ],
-      providers: [ {provide: AngularFirestore, useValue: AngularFirestoreStub} ]
+      declarations: [ DemoTravelComponent, DemoTravelLocationComponent ],
+      providers: [ DemoTravelComponent, DemoTravelLocationComponent,
+                  {provide: AngularFirestore, useValue: AngularFirestoreStub} ]
     })
     .compileComponents();
   }));
