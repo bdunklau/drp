@@ -4,6 +4,7 @@ import { DemoTravelComponent } from '../demo-travel/demo-travel.component';
 import { DemoTransactionsComponent } from '../demo-transactions/demo-transactions.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { BehaviorSubject, of } from 'rxjs';
 
 
 describe('DemoChargeComponent', () => {

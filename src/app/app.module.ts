@@ -21,7 +21,7 @@ import { environment } from '../environments/environment';
     DemoPricingComponent,
     DemoTravelComponent,
     DemoTransactionsComponent,
-    DemoTravelLocationComponent
+    DemoTravelLocationComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

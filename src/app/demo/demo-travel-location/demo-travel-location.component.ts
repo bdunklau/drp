@@ -7,9 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DemoTravelLocationComponent implements OnInit {
 
-  @Input() locationField: {location: string, price: number};
+  // @Input() loc: {location: string, price: number};
 
-  constructor() { }
+  // constructor(locationField: {location: string, price: number}) {
+  //   this.locationField = locationField;
+  // }
+
+  constructor() {}
 
   ngOnInit() {
   }
