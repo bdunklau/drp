@@ -12,11 +12,18 @@ Next to each button, the price at that location
 
 
 
+<div class="row">
+  <div class="col-sm-3">
 
-<div *ngFor="let location of cityPricing.locations">
+    <div *ngFor="let location of cityPricing.locations">
+
+      <app-demo-travel-location [locField]="location"></app-demo-travel-location>
+
+    </div>
+  </div>
 
 
-    <app-demo-travel-location [locField]="location"></app-demo-travel-location>
-
-
+  <div class="col-sm-9">
+    <textarea rows="25" cols="90"></textarea>
+  </div>
 </div>
