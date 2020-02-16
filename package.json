@@ -2,7 +2,7 @@
   "name": "drp",
   "version": "0.0.0",
   "scripts": {
-    "test": "ng test",
+    "test": "ng test --karma-config src/karma.conf.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
