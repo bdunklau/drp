@@ -7,7 +7,7 @@ import { DemoLocation } from '../demo-location/demo-location.model';
 // ng generate class demo/demo-pricing/demo-pricing --type=model
 export class DemoPricingModel {
 
-  //
+  
   // array of maps
   // each map is:
   //     name: [name of location]
@@ -17,10 +17,11 @@ export class DemoPricingModel {
   //             time2: [number, time of day i.e. 1300]
   //             price: [number, i.e.  1.5]
   //
-
+  name: string;
   locations: DemoLocation[];
 
   constructor(val: any) {
+    this.name = val['name'];
     this.locations = _.map(val['locations'], function(loc) {
       return new DemoLocation(loc);
     })

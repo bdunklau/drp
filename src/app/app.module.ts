@@ -12,6 +12,7 @@ import { AngularFirestore, AngularFirestoreCollection/*, CollectionReference*/ }
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { DemoScheduleElementComponent } from './demo/demo-schedule-element/demo-schedule-element.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { environment } from '../environments/environment';
     DemoTravelComponent,
     DemoTransactionsComponent,
     DemoTravelLocationComponent,
+    DemoScheduleElementComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

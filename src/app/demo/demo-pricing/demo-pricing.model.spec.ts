@@ -16,10 +16,11 @@ describe('DemoPricingModel', () => {
       let location2 = {name: 'loc2', schedule: schedule2};
 
       let locations = [location1, location2];
-      let city = {locations: locations};
-      
+      let city = {name: cityName, locations: locations};
+
 
 
     expect(new DemoPricingModel(city)).toBeTruthy();
+    expect(new DemoPricingModel(city).name == 'Dallas').toBeTruthy();
   });
 });

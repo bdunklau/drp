@@ -1,17 +1,29 @@
-<!--
-1 button for the toll location
-and the price at that location
- -->
-
 
 <!--
+INCLUDED BY demo-travel.component.html
+from that page:
+    <div *ngFor="let location of cityPricing['locations']">
+-->
 
- <form>
-    <input type="button" value="location">
 
- </form>
- -->
+  <table border="1" cellspacing="0" cellpadding="3" class="table table-striped">
 
-<!--
-location = {{locationField.location}} price = {{locationField.price}}
- -->
+    <thead>
+    <tr>
+      <th colspan="3">{{locField.name}}</th>
+    </tr>
+    <tr>
+      <th scope="col">from</th>
+      <th scope="col">to</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let scheduleElement of locField.schedule">
+      <td scope="col">{{scheduleElement.time1}}</td>
+      <td scope="col">{{scheduleElement.time2}}</td>
+      <td scope="col">{{scheduleElement.price}}</td>
+    </tr>
+    </tbody>
+  </table>

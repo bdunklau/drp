@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DemoScheduleElement } from '../demo-schedule-element/demo-schedule-element.model';
+import { DemoLocation } from '../demo-location/demo-location.model';
 
 @Component({
   selector: 'app-demo-travel-location',
@@ -7,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DemoTravelLocationComponent implements OnInit {
 
-  @Input() locField: {location: string, price: number};
+  @Input() locField: DemoLocation;
 
   // constructor(locationField: {location: string, price: number}) {
   //   this.locationField = locationField;

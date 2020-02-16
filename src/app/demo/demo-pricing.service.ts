@@ -15,6 +15,8 @@ export class DemoPricingService {
     {location:'loc 3', price: 9}
   ];
 
+  cityPricing: DemoPricingModel;
+
 
   constructor(private afs: AngularFirestore,) {
     console.log('DemoPricingService: constructor')
@@ -37,8 +39,8 @@ export class DemoPricingService {
     // team.leaderCount = teamDoc.data().leaderCount; // e2e testing caught this omission :)
     // team.memberCount = teamDoc.data().memberCount; // e2e testing caught this omission :)
     console.log('cityDoc.data() = ', cityDoc.data());
-    let pricing = new DemoPricingModel(cityDoc.data())
-    console.log('pricing = ', pricing);
-    // return team;
+    let cityPricing = new DemoPricingModel(cityDoc.data())
+    console.log('cityPricing = ', cityPricing);
+    return cityPricing;
   }
 }

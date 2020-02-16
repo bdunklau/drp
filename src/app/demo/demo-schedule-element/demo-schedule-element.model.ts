@@ -13,6 +13,6 @@ export class DemoScheduleElement {
   constructor(val: any) {
     this.time1 = parseInt(val['time1']);
     this.time2 = parseInt(val['time2']);
-    this.price = parseInt(val['price']);
+    this.price = parseFloat(val['price']);
   }
 }

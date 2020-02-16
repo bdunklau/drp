@@ -8,8 +8,15 @@ BUTTONS:
 Next to each button, the price at that location
  -->
 
+<h3>{{cityPricing.name}}</h3>
 
-<div *ngFor="let location of [1,2,3]">
+
+
+
+<div *ngFor="let location of cityPricing.locations">
+
 
     <app-demo-travel-location [locField]="location"></app-demo-travel-location>
+
+
 </div>
