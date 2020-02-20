@@ -9,22 +9,22 @@ import { DemoPricingModel } from './demo-pricing/demo-pricing.model';
 export class DemoPricingService {
 
 
-  pricing: {location: string, price: number}[] = [
-    {location:'loc 1', price: 1},
-    {location:'loc 2', price: 2},
-    {location:'loc 3', price: 9}
-  ];
+  // pricing: {location: string, price: number}[] = [
+  //   {location:'loc 1', price: 1},
+  //   {location:'loc 2', price: 2},
+  //   {location:'loc 3', price: 9}
+  // ];
 
-  cityPricing: DemoPricingModel;
+  // cityPricing: DemoPricingModel;
 
 
   constructor(private afs: AngularFirestore,) {
     console.log('DemoPricingService: constructor')
   }
 
-  getPricing(time: {hour: number, minute: number}) {
-    return this.pricing;
-  }
+  // getPricing(time: {hour: number, minute: number}) {
+  //   return this.pricing;
+  // }
 
 
   async getPricingForCity(city: string) {

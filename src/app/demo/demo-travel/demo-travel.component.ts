@@ -10,13 +10,13 @@ import { DemoPricingModel } from '../demo-pricing/demo-pricing.model';
 })
 export class DemoTravelComponent implements OnInit {
 
-  locations: {location: string, price: number}[];
+  // locations: {location: string, price: number}[];
   cityPricing: DemoPricingModel;
 
   constructor(private pricingService: DemoPricingService) { }
 
   async ngOnInit() {
-    this.locations = this.pricingService.getPricing({hour:1, minute:1});
+    // this.locations = this.pricingService.getPricing({hour:1, minute:1});
     this.cityPricing = await this.pricingService.getPricingForCity('Dallas');
     console.log('this.cityPricing = ',this.cityPricing);
     console.log('this.cityPricing.locations = ',this.cityPricing.locations);

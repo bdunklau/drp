@@ -19,8 +19,8 @@ describe('DemoScheduleElement', () => {
 
 
     expect(new DemoScheduleElement(s1)).toBeTruthy();
-    expect(new DemoScheduleElement(s1.time1)).toEqual(900);
-    expect(new DemoScheduleElement(s1.time2)).toEqual(1000);
-    expect(new DemoScheduleElement(s1.price)).toEqual(1.5);
+    expect(new DemoScheduleElement(s1).time1).toEqual(900);
+    expect(new DemoScheduleElement(s1).time2).toEqual(1000);
+    expect(new DemoScheduleElement(s1).price).toEqual(1.5);
   });
 });
